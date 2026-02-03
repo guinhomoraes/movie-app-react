@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# 🎬 Movie App React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida em **React + TypeScript** para busca e visualização de filmes, consumindo dados da **OMDb API**.  
+O projeto permite pesquisar filmes, visualizar resultados em forma de cards e acessar uma **página de detalhes completa**, com layout moderno e responsivo.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Preview
 
-## React Compiler
+> Em breve  
+*(adicione aqui o link do deploy quando publicar)*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔍 Busca de filmes por título
+- 🎞️ Listagem de filmes em cards
+- 📄 Página de detalhes do filme
+  - Poster em destaque
+  - Sinopse
+  - Gêneros
+  - Diretor, roteirista e elenco
+  - Avaliações (IMDb / Metascore)
+  - Informações adicionais (idioma, país, bilheteria, produção, etc.)
+- 🧭 Navegação com **React Router DOM**
+- ⚡ Dados do filme enviados via `state` da rota
+- 📱 Layout responsivo
+- 🎨 Estilização com CSS puro e Flexbox
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tecnologias utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **React**
+- **TypeScript**
+- **Vite**
+- **Axios**
+- **React Router DOM**
+- **CSS3 (Flexbox)**
+- **OMDb API**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🔐 Variáveis de ambiente
+
+O projeto utiliza variáveis de ambiente para configuração da API.
+
+Crie um arquivo `.env` na **raiz do projeto** com o seguinte conteúdo:
+
+```env
+VITE_IMDB_API_URL=http://www.omdbapi.com
+VITE_IMDB_API_KEY=SEU_API_KEY_AQUI
+VITE_IMDB_API_HOST=http://img.omdbapi.com
+
