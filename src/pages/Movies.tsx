@@ -40,7 +40,7 @@ export function Movies() {
                 <MovieCard key={movie.imdbID} movie={movie}/>
             ):
             (
-                'Não encontrado'
+                'Filme não encontrado'
             )
         }
       </div>
